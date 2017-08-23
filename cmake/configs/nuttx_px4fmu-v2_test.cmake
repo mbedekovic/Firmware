@@ -189,32 +189,3 @@ set(config_module_list
 	# Hardware test
 	#examples/hwtest
 )
-
-set(config_extra_builtin_cmds
-	serdis
-	sercon
-	)
-
-set(config_io_board
-	px4io-v2
-	)
-
-#set(config_extra_libs
-#	uavcan
-#	uavcan_stm32_driver
-#	)
-
-set(config_io_extra_libs
-	)
-
-add_custom_target(sercon)
-set_target_properties(sercon PROPERTIES
-	PRIORITY "SCHED_PRIORITY_DEFAULT"
-	MAIN "sercon" STACK_MAIN "2048"
-	COMPILE_FLAGS "-Os")
-
-add_custom_target(serdis)
-set_target_properties(serdis PROPERTIES
-	PRIORITY "SCHED_PRIORITY_DEFAULT"
-	MAIN "serdis" STACK_MAIN "2048"
-	COMPILE_FLAGS "-Os")
