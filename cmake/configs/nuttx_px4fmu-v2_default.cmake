@@ -113,13 +113,13 @@ set(config_module_list
 	#
 	# Vehicle Control
 	#
-	modules/fw_att_control
-	modules/fw_pos_control_l1
+	#modules/fw_att_control
+	#modules/fw_pos_control_l1
 	modules/gnd_att_control
 	modules/gnd_pos_control
 	modules/mc_att_control
 	modules/mc_pos_control
-	modules/vtol_att_control
+	#modules/vtol_att_control
 
 	#
 	# Logging
@@ -192,6 +192,15 @@ set(config_module_list
 
 	# Hardware test
 	#examples/hwtest
+	
+	####MORUS libs########
+	morus_lib/serial_lib
+	morus_lib/AttitudeControlSS
+	
+	####MORUS modules#####
+	morus_modules/morus_stepperController_commander
+	morus_modules/morus_ss_control
+	morus_modules/morus_direct_control
 )
 
 set(config_extra_builtin_cmds

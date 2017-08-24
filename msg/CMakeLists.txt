@@ -125,6 +125,28 @@ set(msg_file_names
 	vehicle_status_flags.msg
 	vtol_vehicle_status.msg
 	wind_estimate.msg
+	########## MORUS ###########
+	vision_position_estimate.msg
+	morus/controllers_switch.msg
+	morus/controllers_reference.msg
+	morus/attitude_controller_reference.msg
+	morus/controllers_mode.msg
+	morus/position_controller_setpoint.msg
+	morus/gas_motor_status.msg
+	morus/moving_mass_status.msg
+	morus/arm_control_unit_power_status.msg
+	morus/gas_motor_ignition_reference.msg
+	morus/moving_mass_setpoint.msg
+	morus/moving_mass_setpoint_array.msg
+	morus/gas_motor_setpoint.msg
+	morus/gas_motor_setpoint_array.msg
+
+  	pid_status.msg
+  	morus/attitude_controller_status.msg
+  	morus/position_controller_status.msg
+  	morus/flags_v_values_dont_change_timeout.msg
+	morus/flags_v_value_out_of_range.msg
+	morus/flags_v_communication_timeout.msg
 	)
 
 # Get absolute paths
