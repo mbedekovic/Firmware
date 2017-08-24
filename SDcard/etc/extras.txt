@@ -1,0 +1,25 @@
+echo "Extras start"
+mixer load /dev/pwm_output0 /fs/microsd/etc/mixers/IO_pass.main.mix
+set +e
+mc_pos_control stop
+set -e
+set +e
+mavlink stop-all
+set -e
+set +e
+mavlink start -r 800000 -d /dev/ttyACM0 -m config -x
+set -e
+usleep 10000
+set +e
+morus_ss_control start
+set -e
+usleep 50000
+set +e
+morus_stepperController_commander start
+set -e
+usleep 50000
+set +e
+morus_direct_control start
+set -e
+echo "Extras end"
+
